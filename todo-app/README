@@ -1,0 +1,13 @@
+How Everything Connects (Big Picture)
+
+User calls API → e.g. POST /api/todos with JSON.
+
+Controller (TodoController) receives it → converts JSON → Todo object.
+
+Service (TodoService) contains business logic → decides how to save/update/delete.
+
+Repository (TodoRepository) interacts with Database (H2) via JPA.
+
+Entity (Todo) defines table structure in DB.
+
+Spring Boot wires everything automatically (thanks to @SpringBootApplication, @Autowired/constructor injection, etc).
